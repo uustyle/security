@@ -19,9 +19,9 @@ public class SampleUserDetailsService implements UserDetailsService{
 		Set<GrantedAuthority> authorities = new HashSet<GrantedAuthority>();
 
 		if (username.equals("user")) {
-			authorities.add(new SimpleGrantedAuthority("user_role"));
+			authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
 		} else if (username.equals("admin")) {
-			authorities.add(new SimpleGrantedAuthority("admin_role"));
+			authorities.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
 		}
 
 		return new User(username, "arakawa", authorities);

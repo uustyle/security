@@ -12,7 +12,7 @@
     <intercept-url method="POST" pattern="/processLogin" access="permitAll()" />
     <intercept-url method="POST" pattern="/logout" access="isAuthenticated()" />
     <intercept-url method="GET" pattern="/top.jsp" access="permitAll()" />
-    <intercept-url pattern="/admin/**" access="hasRole('admin_role')" />
+    <intercept-url pattern="/admin/**" access="hasRole('ADMIN')" />
     <intercept-url pattern="/**" access="isAuthenticated()" />
     <form-login
       login-page="/login.jsp"
